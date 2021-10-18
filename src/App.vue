@@ -28,7 +28,7 @@
   
       <v-app-bar
         app
-        color="indigo"
+        color="blue darken-1"
         dark
       >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -37,48 +37,36 @@
   
       <v-main>
         <v-container
-          class="fill-height"
           fluid
         >
           <v-row
             align="center"
             justify="center"
           >
-            <v-col class="text-center">
-              <v-tooltip left>
-                <template v-slot:activator="{ on }">
-                  <v-btn
-                    :href="source"
-                    icon
-                    large
-                    target="_blank"
-                    v-on="on"
-                  >
-                    <v-icon large>mdi-code-tags</v-icon>
-                  </v-btn>
-                </template>
-                <span>Source</span>
-              </v-tooltip>
+            <v-col class="text-left">
+                <Index left></Index>
             </v-col>
           </v-row>
         </v-container>
       </v-main>
       <v-footer
-        color="indigo"
+        color="blue darken-1"
         app
       >
-        <span class="white--text">&copy; 2019</span>
+        <span class="white--text">&copy; 清澜山学生网 2021</span>
       </v-footer>
     </v-app>
   </v-app>
 </div></template>
 
 <script>
-
+import Index from "./components/Index.vue";
 export default {
   name: 'App',
 
   components: {
+
+    Index,
   },
 
   data: () => ({
